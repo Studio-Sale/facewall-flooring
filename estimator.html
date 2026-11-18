@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="th"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>ประเมินราคา V2.06 | FACEWALL</title>
+<meta content="FACEWALL จำหน่ายและติดตั้งวัสดุตกแต่งผนังและพื้น พร้อมแคตตาล็อกและเครื่องมือประเมินราคา" name="description"/>
+<meta content="noindex,nofollow" name="robots"/><meta content="#DC7C5F" name="theme-color"/>
+<meta content="website" property="og:type"/><meta content="ประเมินราคา V2.06 | FACEWALL" property="og:title"/><meta content="FACEWALL จำหน่ายและติดตั้งวัสดุตกแต่งผนังและพื้น พร้อมแคตตาล็อกและเครื่องมือประเมินราคา" property="og:description"/>
+<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Noto+Sans+Thai:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/><link rel="stylesheet" href="css/estimator.css?v=area-edit-1"/><link rel="stylesheet" href="css/language.css"/><script defer src="js/language.js"></script></head>
+<body data-page="estimator"><a class="skip-link" href="#main">ข้ามไปยังเนื้อหา</a>
+<div class="announcement"><span class="ann-star">✳︎</span> ผนังสวย พื้นลงตัว <span class="ann-divider">—</span> บริการติดตั้งกรุงเทพฯ และปริมณฑล <a href="contact.html">ปรึกษาเรา <svg aria-hidden="true" class="ui-arrow" fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" viewbox="0 0 24 24" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M5 19 19 5M8 5h11v11"></path></svg></a></div>
+<header class="site-header" id="site-header"><div class="header-inner wrap"><a aria-label="FACEWALL หน้าแรก" class="brand" href="index.html"><img alt="FACEWALL วัสดุตกแต่งผนังและพื้น" height="67" src="assets/logo-white.png" width="206"/></a><nav aria-label="เมนูหลัก" class="site-nav" id="site-nav"><a class="nav-link" href="index.html">หน้าแรก</a>
+<a class="nav-link" href="showcase.html">ก่อนและหลัง</a>
+<a class="nav-link" href="catalog.html">แคตตาล็อก</a>
+<a class="nav-link" href="blog.html">บทความ</a>
+<a aria-current="page" class="nav-link is-active" href="estimator.html">ประเมินราคา</a>
+<a class="nav-link" href="contact.html">ติดต่อ</a></nav><a class="head-cta" href="contact.html">ปรึกษาฟรี <span aria-hidden="true"><svg aria-hidden="true" class="ui-arrow" fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" viewbox="0 0 24 24" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M5 19 19 5M8 5h11v11"></path></svg></span></a><a class="language-switch" href="estimator.en.html" lang="en" hreflang="en">English</a><button aria-controls="site-nav" aria-expanded="false" aria-label="เปิดเมนู" class="menu-toggle" id="menu-toggle"><span></span><span></span></button></div></header>
+<main id="main" class="estimate">
+  <div class="wrap">
+    <div class="estimate-intro">
+      <h1>ประเมินราคา</h1>
+      <p>เลือกวัสดุและกรอกขนาดของแต่ละจุดติดตั้ง</p>
+    </div>
+    <div class="estimate-grid">
+      <section class="estimate-inputs" aria-labelledby="inputs-title">
+        <h2 id="inputs-title">วัสดุและจุดติดตั้ง</h2>
+        <form id="estimate-items">
+          <div id="estimate-rows"></div>
+          <button type="button" class="btn btn-outline" id="estimate-add">+ เพิ่มรายการวัสดุ</button>
+        </form>
+        <noscript><p>เปิด JavaScript เพื่อใช้เครื่องมือประเมินราคา</p></noscript>
+      </section>
+      <section class="estimate-summary" aria-labelledby="summary-title">
+        <h2 id="summary-title">ราคาประเมิน</h2>
+        <p class="estimate-total"><output id="estimate-total" aria-live="polite">—</output></p>
+        <ul id="estimate-breakdown" class="estimate-breakdown"></ul>
+        <dl>
+          <div hidden><dt>พื้นที่วอลเปเปอร์รวม</dt><dd id="estimate-wall-area">—</dd></div>
+          <div hidden><dt>พื้นที่วัสดุปูพื้นรวม</dt><dd id="estimate-floor-area">—</dd></div>
+          <div><dt>ค่าวัสดุประมาณการ</dt><dd id="estimate-material">—</dd></div>
+          <div><dt>ค่าแรงติดตั้ง</dt><dd id="estimate-labor">—</dd></div>
+        </dl>
+        <p class="estimate-note" id="estimate-note">ค่าปรับสภาพพื้นผิว ภาษี และค่าขนส่งให้ทีมงานยืนยัน</p>
+        <div class="estimate-actions">
+          <button type="button" class="btn btn-white" id="estimate-quote">ขอใบเสนอราคา</button>
+          <button type="button" class="btn btn-white" id="estimate-inquire">สอบถามเพิ่มเติม</button>
+        </div>
+        <p id="estimate-status" role="status"></p>
+      </section>
+    </div>
+  </div>
+  <template id="estimate-row">
+    <details class="estimate-row" open>
+      <summary></summary>
+      <button type="button" class="estimate-remove">ลบรายการ</button>
+      <label>วัสดุ<select name="material" required><option value="">เลือกวัสดุ</option></select></label>
+      <label data-catalog hidden>ชื่อเล่มวอลเปเปอร์<select name="catalog"><option value="">ยังไม่เลือกเล่ม</option></select></label>
+      <label>รหัสสินค้าหรือลาย (ถ้าทราบ)<input name="sku" maxlength="45"></label>
+      <label>ชื่อจุดติดตั้ง (ถ้าทราบ)<input name="zone" maxlength="70"></label>
+      <div data-areas></div>
+      <button type="button" class="btn btn-outline estimate-area-add">+ เพิ่มพื้นที่</button>
+    </details>
+  </template>
+  <template id="estimate-area-template">
+    <div class="estimate-area-part"><div class="estimate-area-heading"><div class="estimate-area-name">
+        <strong data-area-title>พื้นที่ 1</strong>
+        <button type="button" class="estimate-area-edit" aria-label="ชื่อพื้นที่"><span aria-hidden="true">✎</span></button>
+        <input name="areaName" maxlength="70" aria-label="ชื่อพื้นที่" hidden>
+      </div><button type="button" class="estimate-area-remove">ลบพื้นที่</button></div>
+      <label>กรอกพื้นที่จาก<select name="mode"><option value="dimensions">ขนาด</option><option value="area">พื้นที่รวม</option></select></label>
+      <div class="estimate-dimensions" data-dimensions>
+        <label>กว้าง (เมตร)<input name="width" type="number" min="0" step="any" inputmode="decimal"></label>
+        <label><span data-length>ยาว / สูง (เมตร)</span><input name="length" type="number" min="0" step="any" inputmode="decimal"></label>
+      </div>
+      <div data-area hidden><label>พื้นที่ (ตร.ม.)<input name="area" disabled type="number" min="0" step="any" inputmode="decimal"></label></div>
+    </div>
+  </template>
+  <dialog id="quote-dialog" class="estimate-dialog" aria-labelledby="quote-title">
+    <form id="quote-form">
+      <div class="estimate-dialog-head"><h2 id="quote-title">ข้อมูลสำหรับออกใบเสนอราคา</h2><button type="button" data-close aria-label="ปิด">×</button></div>
+      <label>ชื่อผู้ติดต่อ<input name="contact" required maxlength="80" autocomplete="name"></label>
+      <label>เบอร์โทร<input name="phone" required type="tel" maxlength="22" autocomplete="tel"></label>
+      <label>ออกใบเสนอราคาในนาม<select name="customerType"><option value="person">บุคคล</option><option value="business">บริษัท</option></select></label>
+      <label>ชื่อบุคคลหรือบริษัทที่ออกเอกสาร<input name="billingName" required maxlength="100"></label>
+      <label>ที่อยู่ออกเอกสาร (ถ้าทราบ)<textarea name="billingAddress" maxlength="220" rows="2"></textarea></label>
+      <div id="quote-company" hidden>
+        <label>เลขผู้เสียภาษี (ถ้าทราบ)<input name="taxId" inputmode="numeric" maxlength="20"></label>
+        <label>สำนักงานใหญ่ / สาขา (ถ้าทราบ)<input name="branch" maxlength="50"></label>
+      </div>
+      <p>LINE จะเปิดข้อความให้คุณตรวจแล้วกดส่งถึง @112rjeke</p>
+      <button class="btn btn-dark" type="submit">ส่งทาง LINE</button>
+    </form>
+  </dialog>
+  <dialog id="estimate-copy" class="estimate-dialog" aria-labelledby="estimate-copy-title">
+    <div class="estimate-dialog-head"><h2 id="estimate-copy-title">คัดลอกข้อความไปส่งใน LINE</h2><button type="button" data-close aria-label="ปิด">×</button></div>
+    <p>ข้อความยาวเกินกว่าจะเปิดใน LINE พร้อมข้อความได้ คัดลอกข้อความด้านล่างแล้ววางในแชต</p>
+    <textarea id="estimate-copy-text" aria-labelledby="estimate-copy-title" readonly rows="7"></textarea>
+    <div class="estimate-actions"><button type="button" id="estimate-copy-button" class="btn btn-dark">คัดลอกข้อความ</button><a class="btn btn-outline" href="https://line.me/R/ti/p/%40112rjeke" target="_blank" rel="noopener noreferrer">เปิด LINE</a></div>
+    <p id="estimate-copy-status" role="status"></p>
+  </dialog>
+</main>
+<footer class="footer"><div class="wrap"><div class="footer-main"><div class="footer-info"><a class="footer-brand" href="index.html"><img alt="FACEWALL" height="88" src="assets/logo-white.png" width="270"/></a><p>ผู้ช่วยรังสรรค์ผนังและพื้นให้สวยในแบบคุณ — จำหน่ายและติดตั้ง Wallpaper, SPC, Vinyl และ Carpet พร้อมทีมสำรวจพื้นที่และช่างติดตั้งมืออาชีพ</p><div class="footer-social"><a href="https://line.me/R/ti/p/%40112rjeke" rel="noopener noreferrer" target="_blank">LINE @112rjeke <svg aria-hidden="true" class="ui-arrow" fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" viewbox="0 0 24 24" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M5 19 19 5M8 5h11v11"></path></svg></a><a href="tel:0961108841">096-110-8841 <svg aria-hidden="true" class="ui-arrow" fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" viewbox="0 0 24 24" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M5 19 19 5M8 5h11v11"></path></svg></a></div></div><div class="footer-links"><h3>สำรวจเว็บไซต์</h3><a href="index.html">หน้าแรก</a><a href="showcase.html">ก่อนและหลัง</a><a href="catalog.html">แคตตาล็อก</a><a href="blog.html">บทความ</a><a href="estimator.html">ประเมินราคา</a><a href="contact.html">ติดต่อ</a></div><div class="footer-links"><h3>บริการของเรา</h3><a href="catalog.html?category=wallpaper">Wallpaper</a><a href="catalog.html?category=flooring">SPC / Vinyl Flooring</a><a href="catalog.html?category=flooring">พรมและวัสดุปูพื้น</a><a href="showcase.html">ผลงานของเรา</a></div><div class="footer-links"><h3>ติดต่อ</h3><a href="tel:0961108841">096-110-8841</a><a href="https://line.me/R/ti/p/%40112rjeke" rel="noopener noreferrer" target="_blank">บัญชีทางการ LINE @112rjeke</a><span>เฟซบุ๊ก: Facewall Flooring</span><span>กรุงเทพฯ และปริมณฑล</span></div></div><div class="footer-bottom"><span>© 2026 FACEWALL วัสดุตกแต่งผนังและพื้น</span><span>เว็บไซต์ตัวอย่าง · สั่งซื้อผ่านทีมงาน</span><a href="#main">กลับด้านบน <svg aria-hidden="true" class="ui-arrow" fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" viewbox="0 0 24 24" width="19" xmlns="http://www.w3.org/2000/svg"><path d="M12 19V5m-5 5 5-5 5 5"></path></svg></a></div></div></footer>
+<script defer src="js/config.js"></script>
+<script defer src="js/site.js"></script>
+<script defer src="js/catalogs.js"></script>
+<script defer src="js/estimate-rates.js"></script>
+<script defer src="js/estimator.js?v=area-edit-1"></script>
+</body></html>

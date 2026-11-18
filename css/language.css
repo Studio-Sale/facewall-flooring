@@ -1,0 +1,41 @@
+.language-switch {
+  flex: 0 0 auto;
+  font-weight: 700;
+  font-size: .85rem;
+  color: var(--ink);
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+.language-switch:hover { background: var(--bone); }
+html[lang="th"] :is(h1, h2, h3, .about-big, .hero h1) {
+  letter-spacing: normal;
+  line-height: 1.18;
+}
+html[lang="th"] .hero h1 { font-size: clamp(38px, 7vw, 106px); }
+html[lang="th"] :is(.page-intro h1, .section h2, .section-top h2, .closing-cta h2) {
+  font-size: clamp(32px, 5.6vw, 78px);
+}
+@media (min-width: 721px) and (max-width: 1100px) {
+  .site-header .head-cta { display: none; }
+}
+@media (max-width: 720px) {
+  .site-header .language-switch { margin-left: auto; margin-right: 10px; }
+}
+@media (max-width: 720px) {
+  .site-header .brand { flex: 0 1 150px; min-width: 0; }
+  .site-header .brand img { width: 100%; height: auto; }
+  .site-header .menu-toggle { flex: 0 0 auto; }
+  .btn { max-width: 100%; white-space: normal; }
+  .closing-cta .btn { display: inline-flex; }
+}
+@media (max-width: 420px) {
+  .hero h1, .closing-cta h2 { font-size: clamp(34px, 11vw, 46px); }
+  .hero-buttons, .closing-cta .wrap { min-width: 0; }
+  .hero .btn, .closing-cta .btn, .how-work-section .btn { padding-inline: 14px; }
+}
+@media (max-width: 420px) {
+  .announcement { white-space: normal; text-align: center; padding-inline: 8px; }
+  main { overflow-x: clip; }
+}
